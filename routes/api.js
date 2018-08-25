@@ -39,13 +39,11 @@ router.route('/posts')
 	})
 	//gets all posts
 	.get(function(req, res){
-		console.log('debug1');
 		Post.find(function(err, posts){
-			console.log('debug2');
 			if(err){
 				return res.send(500, err);
 			}
-			return res.send(200,posts);
+			return res.status(200).send(posts);
 		});
 	});
 

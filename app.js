@@ -11,7 +11,7 @@ require('./models/models');
 var index = require('./routes/index');
 var api = require('./routes/api');
 var authenticate = require('./routes/authenticate')(passport);
-var mongoose = require('mongoose');                         //add for Mongo support
+const  mongoose = require('mongoose');                         //add for Mongo support
 mongoose.connect('mongodb+srv://DLozanoNavas:N20rS687xg3AJTjT@dlozanonavasmongodbcluster0-tru2p.mongodb.net/bitCards?retryWrites=true', { useNewUrlParser: true });             //connect to Mongo
 var app = express();
 
