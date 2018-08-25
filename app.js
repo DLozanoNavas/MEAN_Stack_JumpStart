@@ -1,4 +1,3 @@
-require('dotenv').config()
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -13,7 +12,7 @@ var index = require('./routes/index');
 var api = require('./routes/api');
 var authenticate = require('./routes/authenticate')(passport);
 var mongoose = require('mongoose');                         //add for Mongo support
-mongoose.connect(process.env.MONGO_COMPASS_STRING, { useNewUrlParser: true });             //connect to Mongo
+mongoose.connect('mongodb+srv://DLozanoNavas:N20rS687xg3AJTjT@dlozanonavasmongodbcluster0-tru2p.mongodb.net/bitCards?retryWrites=true', { useNewUrlParser: true });             //connect to Mongo
 var app = express();
 
 // view engine setup
