@@ -1,4 +1,4 @@
-var app = angular.module('chirpApp', ['ngRoute', 'ngResource']).run(function($rootScope) {
+var app = angular.module('bitCards', ['ngRoute', 'ngResource']).run(function($rootScope) {
 	$rootScope.authenticated = false;
 	$rootScope.current_user = '';
 	
@@ -8,9 +8,6 @@ var app = angular.module('chirpApp', ['ngRoute', 'ngResource']).run(function($ro
     	$rootScope.current_user = '';
 	};
 });
-appModule.config(['$locationProvider', function($locationProvider) {
-  $locationProvider.hashPrefix('');
-}]);
 
 app.config(function($routeProvider){
 	$routeProvider
